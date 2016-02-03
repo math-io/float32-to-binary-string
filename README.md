@@ -26,23 +26,23 @@ Returns a `string` giving the literal bit representation of a [single-precision 
 var toFloat32 = require( 'float64-to-float32' );
 
 var str = bits( toFloat32( 4 ) );
-// returns '0 10000001 00000000000000000000000'
+// returns '01000000100000000000000000000000'
 
 str = bits( toFloat32( Math.PI ) );
-// returns '0 10000000 10010010000111111011011'
+// returns '01000000010010010000111111011011'
 
 str = bits( toFloat32( -1e38 ) );
-// returns '1 11111101 00101100111011010011001'
+// returns '11111110100101100111011010011001'
 ```
 
 The `function` handles [subnormals][subnormals].
 
 ``` javascript
 str = bits( toFloat32( -3.14e-39 ) );
-// returns '1 00000000 01000100011000100001011'
+// returns '10000000001000100011000100001011'
 
 str = bits( toFloat32( 1.4e-45 ) );
-// returns '0 00000000 00000000000000000000001'
+// returns '00000000000000000000000000000001'
 ```
 
 The `function` handles special values.
@@ -52,19 +52,19 @@ var pinf = require( 'const-pinf-float32' );
 var ninf = require( 'const-ninf-float32' );
 
 str = bits( 0 );
-// returns '0 00000000 00000000000000000000000'
+// returns '00000000000000000000000000000000'
 
 str = bits( -0 );
-// returns '1 00000000 00000000000000000000000'
+// returns '10000000000000000000000000000000'
 
 str = bits( NaN );
-// returns '0 11111111 10000000000000000000000'
+// returns '01111111110000000000000000000000'
 
 str = bits( pinf );
-// returns '0 11111111 00000000000000000000000'
+// returns '01111111100000000000000000000000'
 
 str = bits( ninf );
-// returns '1 11111111 00000000000000000000000'
+// returns '11111111100000000000000000000000'
 ```
 
 
