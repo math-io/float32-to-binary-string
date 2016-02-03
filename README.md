@@ -2,7 +2,7 @@ Bits
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][build-image]][build-url] [![Coverage Status][coverage-image]][coverage-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> Returns a string giving the literal bit representation of a [single-precision floating-point][ieee754] number.
+> Returns a string giving the literal bit representation of a [single-precision floating-point number][ieee754].
 
 
 ## Installation
@@ -20,7 +20,7 @@ var bits = require( 'math-float32-bits' );
 
 #### bits( x )
 
-Returns a `string` giving the literal bit representation of a [single-precision floating-point][ieee754] `number`.
+Returns a `string` giving the literal bit representation of a [single-precision floating-point number][ieee754].
 
 ``` javascript
 var toFloat32 = require( 'float64-to-float32' );
