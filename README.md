@@ -98,6 +98,7 @@ for ( i = 0; i < 100; i++ ) {
 	x = sign * frac * pow( 2, exp );
 	x = float64ToFloat32( x );
 	b = bits( x );
+	console.log( b );
 }
 ```
 
