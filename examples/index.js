@@ -5,7 +5,7 @@ var pow = require( 'math-power' );
 var abs = require( 'math-abs' );
 var float64ToFloat32 = require( 'float64-to-float32' );
 var smallest = require( 'const-smallest-float32' );
-var bits = require( './../lib' );
+var binaryString = require( './../lib' );
 
 var frac;
 var sign;
@@ -28,7 +28,7 @@ for ( i = 0; i < 100; i++ ) {
 	}
 	x = sign * frac * pow( 2, exp );
 	x = float64ToFloat32( x );
-	b = bits( x );
+	b = binaryString( x );
 	log( x, b );
 }
 
